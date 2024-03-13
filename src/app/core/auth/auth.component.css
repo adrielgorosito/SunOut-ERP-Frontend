@@ -1,0 +1,45 @@
+.container {
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+} 
+
+.form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin-top:30px;
+}
+
+.imgcent {
+    margin: 0 auto;
+    display: grid;
+    justify-self: center; 
+    margin-top: 25px;
+}
+
+.cardstyle {
+    width: 300px;
+    height: 325px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px 2px rgb(59, 56, 13);
+    justify-self: center;
+}
+
+.instyle {
+    text-align: center;
+    background-color: #F8C901;
+    border: 5px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.intext {
+    text-align: center;
+    color: #251e1b; 
+    margin-top: 12px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.8rem;
+}
