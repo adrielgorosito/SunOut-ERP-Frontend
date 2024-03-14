@@ -1,25 +1,34 @@
 <div class="container">
     <div class="imgcent">
-        <img src="assets/img/logo.png" alt="">
+        <img src="assets/img/logo.png" alt="SunOut logo">
     </div>
     <mat-card class="cardstyle">
         <div class="instyle">
             <h1 class="intext"><strong>Ingreso</strong></h1>
         </div>
         <mat-card-content>
-            <form class="form">
-                <mat-form-field style="width: 100%;">
+            <form class="form" [formGroup]="loginForm">
+                <mat-form-field style="width: 100%;" [hideRequiredMarker]="true">
                     <mat-label>Usuario</mat-label>
-                    <input matInput>
+                    <mat-icon matSuffix>account_circle</mat-icon>
+                    <input matInput type="text" formControlName="username">
                 </mat-form-field>
-                <mat-form-field style="width: 100%;">
+                <mat-form-field style="width: 100%;" [hideRequiredMarker]="true">
                     <mat-label>Contraseña</mat-label>
-                    <input matInput>
+                    <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
                 </mat-form-field>
                 <div style="text-align: center">
-                    <button style="background-color:#F8C901; color:black"mat-raised-button color="primary">Iniciar sesión</button>
+                    <button mat-raised-button style="background-color:#F8C901; color:black" 
+                    (click)="submit()"
+                    [disabled]="
+                    loginForm.get('username')!.value === '' ||
+                    loginForm.get('password')!.value === ''
+                    ">Iniciar sesión</button>
                 </div>
             </form>
         </mat-card-content>
     </mat-card>
-</div> 
+</div>

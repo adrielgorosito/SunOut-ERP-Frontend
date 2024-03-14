@@ -1,23 +1,36 @@
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imgcent {
+        display: none;
+    }
+
+    .cardstyle {
+        margin-left: 0;
+    }
+}
+
 .container {
-    width: 800px;
-    height: 800px;
-    margin: 0 auto;
-    display: grid;
+    display: flex;
     justify-content: center;
-} 
+    align-items: center;
+    height: 100vh;
+    font-family: arial;
+}
 
 .form {
     min-width: 150px;
     max-width: 500px;
     width: 100%;
-    margin-top:30px;
+    margin-top: 35px;
 }
 
 .imgcent {
-    margin: 0 auto;
-    display: grid;
-    justify-self: center; 
     margin-top: 25px;
+    margin-right: 100px;
 }
 
 .cardstyle {
@@ -38,8 +51,8 @@
 
 .intext {
     text-align: center;
-    color: #251e1b; 
+    color: #251e1b;
     margin-top: 12px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Araboto Medium', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1.8rem;
 }
