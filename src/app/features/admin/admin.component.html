@@ -1,0 +1,11 @@
+
+<app-header (SidenavToggle)="sidenav.toggle()"></app-header>
+  <mat-sidenav-container>
+    <mat-sidenav style="background-color:#ffd740;" #sidenav role="navigation" position="start" [fixedInViewport]="true">
+      <app-side-nav (CloseSidenav)="sidenav.close()"></app-side-nav>
+    </mat-sidenav>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+    <!-- <app-footer></app-footer> -->
+  </mat-sidenav-container>
