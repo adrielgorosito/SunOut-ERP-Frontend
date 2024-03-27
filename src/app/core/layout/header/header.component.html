@@ -1,0 +1,90 @@
+<mat-toolbar color="accent" id="header">
+    <nav mat-tab-nav-bar class="me-auto d-none d-sm-none d-lg-block"> 
+      <button mat-flat-button color="accent">Inicio</button>
+
+      <button mat-flat-button [matMenuTriggerFor]="pedidos" color="accent">
+          Pedidos<mat-icon>arrow_drop_down</mat-icon>
+      </button>
+          <mat-menu #pedidos="matMenu">
+              <button mat-menu-item>Item 1</button>
+              <button mat-menu-item>Item 2</button>
+          </mat-menu>
+
+      <button mat-flat-button [matMenuTriggerFor]="items" color="accent">
+          Items<mat-icon>arrow_drop_down</mat-icon>
+      </button>
+          <mat-menu #items="matMenu">
+              <button mat-menu-item>Item 1</button>
+              <button mat-menu-item>Item 2</button>
+          </mat-menu>
+
+      <button mat-flat-button [matMenuTriggerFor]="dist" color="accent">
+          Distribución<mat-icon>arrow_drop_down</mat-icon>
+      </button>
+          <mat-menu #dist="matMenu">
+              <button mat-menu-item>Item 1</button>
+              <button mat-menu-item>Item 2</button>
+          </mat-menu>
+
+      <button mat-flat-button [matMenuTriggerFor]="ventadir" color="accent">
+          Venta Directa<mat-icon>arrow_drop_down</mat-icon>
+      </button>
+          <mat-menu #ventadir="matMenu">
+              <button mat-menu-item>Item 1</button>
+              <button mat-menu-item>Item 2</button>
+          </mat-menu>
+
+      <button mat-flat-button [matMenuTriggerFor]="compras" color="accent">
+          Compras <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+          <mat-menu #compras="matMenu">
+              <button mat-menu-item>Item 1</button>
+              <button mat-menu-item>Item 2</button>
+          </mat-menu>
+
+      <button mat-flat-button [matMenuTriggerFor]="produccion" color="accent">
+          Produccion<mat-icon>arrow_drop_down</mat-icon>
+      </button>
+          <mat-menu #produccion="matMenu">
+              <button mat-menu-item>Item 1</button>
+              <button mat-menu-item>Item 2</button>
+          </mat-menu>
+
+      <button mat-flat-button [matMenuTriggerFor]="logistica" color="accent">
+          Logística<mat-icon>arrow_drop_down</mat-icon>
+      </button>
+          <mat-menu #logistica="matMenu">
+              <button mat-menu-item>Item 1</button>
+              <button mat-menu-item>Item 2</button>
+          </mat-menu>
+      
+      <button mat-flat-button [matMenuTriggerFor]="config" color="accent">
+          Configuración<mat-icon>arrow_drop_down</mat-icon>
+      </button>
+          <mat-menu #config="matMenu">
+              <button mat-menu-item>Item 1</button>
+              <button mat-menu-item>Item 2</button>
+          </mat-menu>
+
+      <button mat-flat-button [matMenuTriggerFor]="reportes" color="accent">
+          Reportes <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+          <mat-menu #reportes="matMenu">
+              <button mat-menu-item>Item 1</button>
+              <button mat-menu-item>Item 2</button>
+          </mat-menu>    
+      <button mat-flat-button color="accent">Usuarios</button> 
+    </nav>
+        <div class="me-auto d-block d-sm-block d-lg-none">
+            <button class="text-dark bg-white border-0" color="black" mat-mini-fab (click)="onToggleSidenav()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </div>
+        <button mat-mini-fab color="accent" [matMenuTriggerFor]="usuario" class="user-button">
+            <mat-icon>account_circle</mat-icon>
+        </button>
+            <mat-menu #usuario="matMenu">
+                <button mat-menu-item>Item 1</button>
+                <button mat-menu-item>Item 2</button>
+</mat-menu>
+  </mat-toolbar>
