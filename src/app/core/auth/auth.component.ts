@@ -40,16 +40,17 @@ export class AuthComponent {
 
     const observer = {
       next: (response: any) => {
-        user.type = JSON.parse(response).type;
-        console.log("Tipo:", user.type);
+        // localStorage.setItem('token', response.token);   -- add jwt token in the future
 
-        // localStorage.setItem('token', response.token);
-        // localStorage.setItem('user', JSON.stringify(user));
-        /* PARA OBTENER EL USUARIO DESPUÉS, USAR JSON.parse: const user = JSON.parse(localStorage.getItem('user')); */
-        if (user.type == 1) this.router.navigate(['/...admin'])
-        else if (user.type == 2) this.router.navigate(['/...prod'])
-        else this.router.navigate(['/...donde'])
+        user.type = JSON.parse(response).type;
+        localStorage.setItem('user', JSON.stringify(user));
+
+        if (user.type == 1) this.router.navigate(['/admin'])
+        else if (user.type == 2) this.router.navigate(['/production'])
+        else if (user.type == 3) this.router.navigate(['/sells'])
+        else this.router.navigate(['/error'])
       },
+
       error: (error: any) => {
         switch (error.status) {
             case 0:

@@ -1,5 +1,5 @@
-<mat-toolbar color="accent" id="header">
-    <nav mat-tab-nav-bar class="me-auto d-none d-sm-none d-lg-block"> 
+<ng-container *ngIf="userType == 1">
+    <mat-toolbar color="accent" id="header">
         <button mat-flat-button color="accent" class="button-container">
             <img src="assets/img/SunoutIcon.png" class="logo-img">
         </button>
@@ -66,7 +66,7 @@
             <button mat-menu-item>Item 1</button>
             <button mat-menu-item>Item 2</button>
         </mat-menu>
-      
+        
         <button mat-flat-button [matMenuTriggerFor]="config" color="accent" class="button-container">
             <span>Configuración&nbsp;</span>
             <mat-icon>arrow_drop_down</mat-icon>
@@ -86,13 +86,25 @@
         </mat-menu>
 
         <button mat-flat-button color="accent">Usuarios</button> 
-    </nav>
 
-    <button mat-mini-fab color="accent" [matMenuTriggerFor]="usuario" class="user-button">
-        <mat-icon>account_circle</mat-icon>
-    </button>
-    <mat-menu #usuario="matMenu">
-        <button mat-menu-item>Item 1</button>
-        <button mat-menu-item>Item 2</button>
-    </mat-menu>
-</mat-toolbar>
+        <button mat-mini-fab color="accent" [matMenuTriggerFor]="usuario" class="user-button">
+            <mat-icon>account_circle</mat-icon>
+        </button>
+        <mat-menu #usuario="matMenu">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+        </mat-menu>
+    </mat-toolbar>
+</ng-container>
+
+<ng-container *ngIf="userType === 2">
+    <mat-toolbar color="accent" id="header">
+            tipo 2
+    </mat-toolbar>
+</ng-container>
+
+<ng-container *ngIf="userType === 3">
+    <mat-toolbar color="accent" id="header">
+        tipo 3
+    </mat-toolbar>
+</ng-container>
